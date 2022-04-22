@@ -1,0 +1,4 @@
+Create Train Component
+Take train id, train type, train route as user input
+display Train Information on brouwser
+Update information using useState
