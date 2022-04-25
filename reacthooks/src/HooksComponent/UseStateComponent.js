@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+import { useContext, useEffect, useState } from "react";
+import { MyContext } from "../App";
 // react 16.8
 // no need of class components
 // access the states of variables also other react features
@@ -9,15 +9,26 @@ import { useState } from "react";
 export function StateComponent(){
     let [companyName, setCompany] =useState('NeoSoft Technology');
     let [counter, setCounter]=useState(0);
+    let bStyle=useContext(MyContext);
+     /*useEffect is called whenever we want to do something after rendering, 
+     example: fetch the data from backend*/
+     useEffect(()=>{
+        alert("Counter value changed");
+    },[counter]); 
+     useEffect(()=>{
+         document.title="Hooks Demos";
+         alert("company Name changed");
+     },[companyName]);
     function changeName(){
         setCompany("Squad Infotech");
         console.log("company name is:"+companyName);
     }  
     return(
-        <div>Welcome to <h2>{companyName}</h2>
+        <div style={bStyle}>Welcome to <h2>{companyName}</h2>
         <button onClick={changeName}>CHANGE</button>
         <div>Counter is <b>{counter}</b></div>
-        <button className="btn btn-primary" onClick={()=>setCounter(++counter)}>INCREMENT</button>
+        <button className="btn btn-primary" 
+        onClick={()=>setCounter(++counter)}>INCREMENT</button>
         </div>
     ); 
 }
@@ -58,7 +69,7 @@ export function StateComponent2(){
            <ol>
             {
                 array.map(ele=>{
-                    return (<li>{ele}</li>);
+                    return (<li key={ele}>{ele}</li>);
                 })
             }
         </ol>
@@ -69,6 +80,7 @@ export function StateComponent2(){
 
 export function InputComponent(){
     let [companyName, setCompany] =useState('NeoSoft Technology'); 
+
     return(
         <div>Welcome to <h2>{companyName}</h2>
         <label>Enter Company Name: </label>
