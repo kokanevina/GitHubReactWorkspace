@@ -3,6 +3,7 @@ import './App.css';
 import { StateComponent, StateComponent1,StateComponent2,InputComponent,InputComponent1} from './HooksComponent/UseStateComponent';
 import {Footer} from './HooksComponent/UseContextComponent';
 import { createContext } from 'react';
+import { UseRef } from './HooksComponent/UseRefComponent';
 export let MyContext=createContext();
 function App() {
 let borderStyle={
@@ -20,6 +21,8 @@ let borderStyle={
    <InputComponent1></InputComponent1>
    <hr></hr>
    <Footer></Footer>
+   <hr></hr>
+   <UseRef></UseRef>
    </MyContext.Provider>
    
    </>

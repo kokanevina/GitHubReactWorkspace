@@ -1,5 +1,0 @@
-Do following things in any parent component js file
-	Create empty array for Train objects
-	take train id, train type and train route from use
-	and when click on button ADD, train object should be added in train array.
-Display Array in any Child component js file (pass array using context not using props)

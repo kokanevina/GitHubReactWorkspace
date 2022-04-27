@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 
 export function Login1(){
@@ -121,3 +121,28 @@ export function Login3(){
         </>
         );
 }
+
+export function Login4(){
+    let [uName, setUName]=useState("krupa");
+    let collectForm=(ev)=>{
+        ev.preventDefault();
+        alert("U enetered :"+uName);
+    }
+    let storeValue=(ev)=>{
+        setUName(ev.target.value);
+    }
+    return(
+            <>
+            <form onSubmit={(event)=>collectForm(event)} >
+                <label>Enter username:</label>
+                <input type="text" defaultValue={uName} onBlur={(event)=>storeValue(event)}></input>
+                <input type="submit" value="LOGIN"></input>
+                <input type="reset" value="RESET"></input>
+            </form>
+            <div>
+                UserName is : <b>{uName}</b>
+            </div>
+            </>
+        );
+}
+
