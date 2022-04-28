@@ -1,0 +1,15 @@
+.myHeader,.myFooter{
+    height:200px;
+    border: 2px solid red;
+}
+.myNav{
+    background-color: black;
+    border: 1px dashed pink;
+}
+.myList li{
+    display: inline-block;
+    margin: 10px;
+}
+.myList li a{
+    color: white;
+}
