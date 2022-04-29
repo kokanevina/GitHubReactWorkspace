@@ -6,6 +6,7 @@ import {Routes,Route} from 'react-router-dom';
 import {Home} from './Components/Home';
 import {Login} from './Components/Login';
 import { Employees } from './Components/Employees';
+import { Salaries } from './Components/Salaries';
 function App() {
   return (<> 
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Route path="home" element={<Home/>}></Route>
         <Route path='login' element={<Login/>}></Route>
         <Route path='showemployees' element={<Employees/>}></Route>
+        <Route path='showsalary/:eid' element={<Salaries />}></Route> {/*Route with parameter */}
         </Routes>
      </div>
      <Footer></Footer>

@@ -1,0 +1,11 @@
+React Application for Crud Operations
+usersSet=[]
+
+AddUser : Name, Contact Number, Age, user Name, new password 
+Users  : display usersSet in table format (search link after every user info) (delete link after user info)
+FindUser : search user with id from usersSet and display it  (id should be taken from route)
+UpdateUser :
+	1. search user with id (id should be taken from route)
+	2. Display details in input fields. u can edit text fields (make user name read only)
+	3. delete user with that id and add this updated user 
+DeleteUser : search user with id (id should be taken from route) from usersSet and delete it and redirect to Users Component

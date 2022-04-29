@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { empArray } from "../Data/EmployeeArray";
 
 export function Employees(){
@@ -11,11 +12,12 @@ export function Employees(){
                 {
                     empArray.map((employee)=>{
                         return (
-                            <tr>
+                            <tr key={employee.empId}>
                                 <td>{employee.empId}</td>
                                 <td>{employee.empName}</td>
                                 <td>{employee.empSalary}</td>
                                 <td>{employee.empQualification}</td>
+                                <td><Link to={'/showsalary/'+employee.empId}>Search Salary Details</Link></td>
                             </tr>
                         );
                     })
